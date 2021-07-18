@@ -16,6 +16,7 @@ export default class NewBill {
     new Logout({ document, localStorage, onNavigate })
   }
   handleChangeFile = e => {
+    document.querySelector(".error-imageFormat").style.display = "none"
     const file = this.document.querySelector(`input[data-testid="file"]`).files[0]
     const fileExtension = file.name.split(".").pop()
     const filePath = e.target.value.split(/\\/g)
