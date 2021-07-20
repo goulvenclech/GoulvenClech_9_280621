@@ -38,7 +38,6 @@ export default class NewBill {
           })
     }
     else{
-      console.log("Coucou")
       document.querySelector(".error-imageFormat").style.display = "block"
       document.querySelector(`input[data-testid="file"]`).value = null
     }
@@ -67,6 +66,7 @@ export default class NewBill {
   }
 
   // not need to cover this function by tests
+  /* istanbul ignore next */
   createBill = (bill) => {
     if (this.firestore) {
       this.firestore
