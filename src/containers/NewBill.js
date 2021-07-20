@@ -26,7 +26,7 @@ export default class NewBill {
      * Check if the file is an image
      */
     if(['jpg','jpeg','png'].includes(fileExtension)){
-      document.getElementById("error-filetype").s
+      /* istanbul ignore next */
       this.firestore
           .storage
           .ref(`justificatifs/${fileName}`)

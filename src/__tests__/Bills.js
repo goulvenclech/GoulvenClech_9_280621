@@ -34,11 +34,10 @@ describe("Given I am connected as an employee", () => {
       test("Then the click new bill handler should be called", () => {  
         document.body.innerHTML = BillsUI({ data: bills })
         const sampleBills = new Bills({ document, onNavigate, firestore: null, localStorage: window.localStorage })
-        const handleClickNewBill = jest.fn(sampleBills.handleClickNewBill)
-        const newBillButton = screen.getByTestId("btn-new-bill")
-        newBillButton.addEventListener("click", handleClickNewBill)
-        userEvent.click(newBillButton)
-        expect(handleClickNewBill).toBeCalled()
+        sampleBills.handleClickNewBill = jest.fn()
+        screen.getByTestId("btn-new-bill").addEventListener("click", sampleBills.handleClickNewBill)
+        screen.getByTestId("btn-new-bill").click()
+        expect(sampleBills.handleClickNewBill).toBeCalled()
       })
     })
     describe("And I click on the eye icon", () => {
@@ -55,8 +54,8 @@ describe("Given I am connected as an employee", () => {
         const iconEye = document.querySelector(`div[data-testid="icon-eye"]`)
         $.fn.modal = jest.fn()
         sampleBills.handleClickIconEye(iconEye)
-        expect($.fn.modal).toHaveBeenCalled()
-        expect(document.querySelector(".modal")).toBeTruthy();
+        expect($.fn.modal).toBeCalled()
+        expect(document.querySelector(".modal")).toBeTruthy()
       })
     })
   })
