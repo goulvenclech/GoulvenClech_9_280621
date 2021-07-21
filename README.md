@@ -5,7 +5,7 @@ Billed est une solution SaaS destiné aux équipes RH, servant pour l'instant à
 Ma mission sur ce projet était de corriger une série de bug (repertoriés [ici](https://www.notion.so/a7a612fc166747e78d95aa38106a55ec)), à améliorer la couverture des tests (pour `container/NewBill.js`, `container/Bills.js` et `views/Bills`) et réaliser un scénario de test End to End pour l'interface utilisateur. Pour être honnête, ce projet ne m'a pas intéréssé et j'y ai donc fait uniquement ce que l'on me demandait. 
 
 Plusieurs raisons peuvent être évoquées : 
-- Premièrement, plus j'aquiet de l'expérience sur JavaScript plus je suis épuisé par les problèmes de design et de legacy de ce langage. Notamment dans le cadre de ce projet, on aurait pu réaliser moins de tests et des tests de meilleurs qualité sur un langage avec un système de type correct et à structures de données immutables.
+- Premièrement, plus j'aquiet de l'expérience sur JavaScript plus je suis épuisé par les problèmes de design et de legacy de ce langage. Notamment dans le cadre de ce projet, on aurait pu réaliser moins de tests et des tests de meilleurs qualité sur un langage avec un système de type correct et à structures de données immuables.
 - Deuxièmement, la qualité du code du projet initial est désastreuse. Outre les choix de technologies qui lance ce projet avec une sacré dette technique, le code est mal organisé, peu lisible, peu/pas documenté... Je pense que dans le cadre d'un vrai projet, je l'aurais entièrement re-écrit. De plus, une meilleure organisation du code (par exemple dans un [paradigme fonctionnel](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle)) aurait rendu la tâche des tests bien plus facile.
 - Finalement, les prochains projets de la formation (notamment sur React) m'intéresse plus, notamment car il s'agit de projets plus complets où je pourrais un peu plus m'amuser à écrire la base du code par moi même, faire mes choix de technologies et d'organisation. Et peut-être tester [ReScript](https://rescript-lang.org/) sur lequel je louche depuis quelques semaines, sans avoir le temps d'y toucher.
 
@@ -33,7 +33,7 @@ Ce projet utilise le gestionnaire de paquet [NPM](https://www.npmjs.com/), le ca
 
 Honnêtement, c'est un bordel sans nom donc je ne vais pas m'amuser à expliquer. Mais quelques indications importantes :
 
--> `~/???.pdf` : contient un plan de test end to end pour la partie utilisateur
+-> `~/Billed - Plan de test End-to-End du parcours employé.pdf` : contient un plan de test end to end pour la partie utilisateur
 
 -> `~/src/__tests__` : contient tout les tests du projet
 
